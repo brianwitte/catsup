@@ -1,3 +1,7 @@
+# .hs proj .gitignore
+#
+# All the ignorin' I can think of for now.
+
 dist
 dist-*
 cabal-dev
