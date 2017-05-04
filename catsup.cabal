@@ -1,13 +1,13 @@
-name:                ketchupz
+name:                catsup
 version:             0.1.0.0
 -- synopsis:
 -- description:
-homepage:            https://github.com/githubuser/ketchupz#readme
+homepage:            https://github.com/githubuser/catsup#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2017 Author name here
+author:              bwiyy
+maintainer:          bwiyy
+copyright:           No Copyright
 category:            Web
 build-type:          Simple
 extra-source-files:  README.md
@@ -38,4 +38,4 @@ test-suite ketchupz-test
 
 source-repository head
   type:     git
-  location: https://github.com/githubuser/ketchupz
+  location: https://github.com/githubuser/catsup

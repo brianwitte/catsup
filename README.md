@@ -1,4 +1,3 @@
-# ketchupz
-# ketchupz
-# ketchupz
 # catsup
+
+Haskell Brain Dump (Unstructured)
