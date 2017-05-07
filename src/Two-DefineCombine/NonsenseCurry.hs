@@ -21,3 +21,10 @@ uncurriedFunction (i, b) =
 
 anonymous :: Integer -> Bool -> Integer
 anonymous = \i b -> i + (nonsense b)
+
+anonymousAndManuallyNested :: Integer
+                           -> Bool
+                           -> Integer
+anonymousAndManuallyNested =
+  \i -> \b -> i + (nonsense b)
+  
