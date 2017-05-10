@@ -142,7 +142,7 @@ munge :: (x -> y) -> (y -> (w,z)) -> x -> w
 munge xy ywz x = fst $ ywz $ xy x
 
 -- the main func is number 3 from "Fix it" section
-main :: IO()
+main :: IO ()
 main = do
   print $ 1 + 2
   print 10
