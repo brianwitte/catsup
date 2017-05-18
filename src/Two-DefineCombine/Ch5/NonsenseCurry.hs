@@ -28,3 +28,14 @@ anonymousAndManuallyNested :: Integer
 anonymousAndManuallyNested =
   \i -> \b -> i + (nonsense b)
   
+currentYear :: Fractional a => a
+currentYear = 2017
+
+queensCoronation :: Fractional a => a
+queensCoronation = 1952
+
+usIndependence :: Fractional a => a
+usIndependence = 1776
+
+compareIndAndQueensRule :: Fractional a => a
+compareIndAndQueensRule = (currentYear - queensCoronation) / (currentYear - usIndependence)
