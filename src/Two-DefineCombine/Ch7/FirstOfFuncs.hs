@@ -39,3 +39,7 @@ isItTwo :: (Num a, Eq a) => a -> Bool
 isItTwo 2 = True
 isItTwo _ = False
 
+-- **
+
+data Switch = On
+            | Off
