@@ -49,6 +49,6 @@ switchStatus On = "The Switch is On."
 switchStatus Off = "The Switch is Off."
 
 machineStandby :: String -> String
-machineStandby status  = case status == "The Switch is On." of
+machineStandby status  = case status == switchStatus On of
   True -> "The machine will run at 3.8GhZ and be ready for cycles."
   False -> "The machine will be in idle state and inactive."
