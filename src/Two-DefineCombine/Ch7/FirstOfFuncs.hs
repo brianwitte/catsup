@@ -56,3 +56,6 @@ machineStandby status = case status == switchStatus On of
 cycling :: Fractional a => Switch -> a
 cycling On = 7 * 0.078328
 cycling Off = error "The switch is off. It will not cycle."
+
+-- ** 
+  
