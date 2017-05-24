@@ -26,3 +26,17 @@ gentoo = Peng Antarctica
 macaroni = Peng Antarctica
 little = Peng Australia
 galapagos = Peng Galapagos
+
+-- TEST DATA
+
+galapagosPenguin :: Penguin -> Bool
+galapagosPenguin (Peng Galapagos) = True
+galapagosPenguin _                   = False
+
+antarcticPenguin :: Penguin -> Bool
+antarcticPenguin (Peng Antarctica) = True
+antarcticPenguin _                 = False
+
+antarcticOrGalapagos :: Penguin -> Bool
+antarcticOrGalapagos p =
+  (galapagosPenguin p) || (antarcticPenguin p)
