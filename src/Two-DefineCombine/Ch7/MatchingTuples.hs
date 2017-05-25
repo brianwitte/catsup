@@ -11,3 +11,4 @@ fst3 (x, _, _) = x
 
 third3 :: (a, b, c) -> c
 third3 (_, _, x) = x
+
