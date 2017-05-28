@@ -12,3 +12,8 @@ applyTimes :: (Eq a, Num a) =>
                a -> (b -> b) -> b -> b
 applyTimes 0 f b = b
 applyTimes n f b = f . applyTimes (n - 1) f $ b
+
+zero :: Int -> Int
+zero n = case n /= 0 of
+           True  -> zero (n - 1)
+           False -> n
