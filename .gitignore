@@ -1,6 +1,8 @@
 # .hs proj .gitignore
 #
 # All the ignorin' I can think of for now.
+#
+# TODO: Add comments and structure
 
 dist
 dist-*
