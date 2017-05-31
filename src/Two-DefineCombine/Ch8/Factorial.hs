@@ -17,3 +17,5 @@ zero :: Int -> Int
 zero n = case n /= 0 of
            True  -> zero (n - 1)
            False -> n
+
+-- TODO: More recursion!
