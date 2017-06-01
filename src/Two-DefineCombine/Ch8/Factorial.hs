@@ -13,9 +13,13 @@ applyTimes :: (Eq a, Num a) =>
 applyTimes 0 f b = b
 applyTimes n f b = f . applyTimes (n - 1) f $ b
 
-zero :: Int -> Int
-zero n = case n /= 0 of
-           True  -> zero (n - 1)
-           False -> n
-
 -- TODO: More recursion!
+
+zeroMatch :: Int -> Int
+zeroMatch 0 = 0
+zeroMatch n = zeroMatch (n - 1)
+
+zeroCase :: Int -> Int
+zeroCase n = case n /= 0 of
+           True  -> zeroCase (n - 1)
+           False -> n
