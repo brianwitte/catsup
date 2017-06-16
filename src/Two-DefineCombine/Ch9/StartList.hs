@@ -12,3 +12,7 @@ safeTail :: [a] -> Maybe [a]
 safeTail []     = Nothing
 safeTail (x:[]) = Nothing
 safeTail (_:xs) = Just xs
+
+
+eftBool :: Bool -> Bool -> [Bool]
+eftBool = undefined
