@@ -13,15 +13,15 @@ safeTail []     = Nothing
 safeTail (x:[]) = Nothing
 safeTail (_:xs) = Just xs
 
-
+-- I am binding variables just to get it to typecheck :-p
 eftBool :: Bool -> Bool -> [Bool]
-eftBool = undefined
+eftBool x y = enumFromTo (1 > 2) (1 < 2)
 
 eftOrd :: Ordering -> Ordering -> [Ordering]
-eftOrd = undefined
+eftOrd x y = enumFromTo (compare 1 2) (compare 2 1)
 
 eftInt :: Int -> Int -> [Int]
-eftInt = undefined
+eftInt x y = enumFromTo 1 10
 
 eftChar :: Char -> Char -> [Char]
-eftChar = undefined
+eftChar x y = enumFromTo 'a' 'z'
