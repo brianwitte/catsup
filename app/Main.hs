@@ -5,4 +5,4 @@ import Lib
 
 main :: IO ()
 main = do
-  print ((++) ("not") (drop 4 "whatever"))
+  print ((++) ("not n") (drop 4 "whatever"))
