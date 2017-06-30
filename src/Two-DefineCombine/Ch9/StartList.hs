@@ -14,7 +14,7 @@ safeTail []     = Nothing
 safeTail (x:[]) = Nothing
 safeTail (_:xs) = Just xs
 
--- I am binding variables just to get it to typecheck :-p
+-- I am binding variables just to get the funcs to typecheck :-p
 eftBool :: Bool -> Bool -> [Bool]
 eftBool x y = enumFromTo (1 > 2) (1 < 2)
 
@@ -26,3 +26,4 @@ eftInt x y = enumFromTo 1 10
 
 eftChar :: Char -> Char -> [Char]
 eftChar x y = enumFromTo 'a' 'z'
+
