@@ -27,7 +27,4 @@ eftInt x y = enumFromTo 1 10
 eftChar :: Char -> Char -> [Char]
 eftChar x y = enumFromTo 'a' 'z'
 
-<<<<<<< HEAD
 myWords x = dropWhile $ takeWhile x
-=======
->>>>>>> b5978d5e295c875178aec1db9f6e4eb05a41dc13
