@@ -7,7 +7,6 @@ myHead (x:_) = x
 
 myTail (_:xs) = xs
 
-
 -- This one does using Maybe
 safeTail :: [a] -> Maybe [a]
 safeTail []     = Nothing
