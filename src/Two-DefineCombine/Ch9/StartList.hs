@@ -39,3 +39,11 @@ upperCased (x:xs) = toUpper x : xs
 upperRecursioned :: [Char] -> [Char]
 upperRecursioned [] = []
 upperRecursioned (x:xs) = toUpper x : upperRecursioned xs
+
+upperHead :: [Char] -> Char
+upperHead xs = toUpper $ head xs
+
+upperHeadComposed :: [Char] -> Char
+upperHeadComposed = toUpper . head
+
+
