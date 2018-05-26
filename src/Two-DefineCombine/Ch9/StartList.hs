@@ -1,5 +1,7 @@
 module StartList where
 
+import Data.Char
+
 -- Lists
 
 -- No exception handling in these funcs
@@ -26,4 +28,14 @@ eftInt x y = enumFromTo 1 10
 eftChar :: Char -> Char -> [Char]
 eftChar x y = enumFromTo 'a' 'z'
 
-myWords x = dropWhile $ takeWhile x
+-- Chapter Exercises 9.12
+
+printUpper :: [Char] -> [Char]
+printUpper xs = filter (\x -> isUpper x == True) xs
+
+upperCased :: [Char] -> [Char]
+upperCased (x:xs) = toUpper x : xs
+
+upperRecursioned :: [Char] -> [Char]
+upperRecursioned [] = []
+upperRecursioned (x:xs) = toUpper x : upperRecursioned xs
