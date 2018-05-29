@@ -46,4 +46,42 @@ upperHead xs = toUpper $ head xs
 upperHeadComposed :: [Char] -> Char
 upperHeadComposed = toUpper . head
 
+-- writing your own standard functions
 
+myAnd :: [Bool] -> Bool
+myAnd [] = True
+myAnd (x:xs) =
+    if x == False
+    then False
+    else myAnd xs
+
+myAndDirect :: [Bool] -> Bool
+myAndDirect [] = True
+myAndDirect (x:xs) = x && myAndDirect xs
+
+myOr :: [Bool] -> Bool
+myOr [] = False
+myOr (x:xs) =
+    if x == True
+    then True
+    else myOr xs
+
+myAny :: (a -> Bool) -> [a] -> Bool
+myAny f [] = False
+myAny f (x:xs) = 
+    if f x == True
+    then True
+    else myAny f xs
+
+myElem :: Eq a => a -> [a] -> Bool
+myElem thing [] = False
+myElem thing (x:xs)
+    | x == thing = True
+    | x /= thing = myElem thing xs
+
+myReverse :: [a] -> [a]
+myReverse [] = []
+myReverse listy = last listy : myReverse (take ((length listy) - 1)listy)
+
+squish :: [[a]] -> [a]
+squish (x:xs) = concat (x:xs)
