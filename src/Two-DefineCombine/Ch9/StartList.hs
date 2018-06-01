@@ -85,3 +85,13 @@ myReverse listy = last listy : myReverse (take ((length listy) - 1)listy)
 
 squish :: [[a]] -> [a]
 squish (x:xs) = concat (x:xs)
+
+squishMap :: (a -> [b]) -> [a] -> [b]
+squishMap f xs = concat $ map f $ xs
+
+squishAgain :: [[a]] -> [a]
+squishAgain xs = squishMap (\x-> x) xs
+
+
+
+
