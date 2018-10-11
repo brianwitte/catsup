@@ -28,7 +28,7 @@ eftInt x y = enumFromTo 1 10
 eftChar :: Char -> Char -> [Char]
 eftChar x y = enumFromTo 'a' 'z'
 
--- Chapter Exercises 9.12
+-- Chapter Ex 9.12
 
 printUpper :: [Char] -> [Char]
 printUpper xs = filter (\x -> isUpper x == True) xs
@@ -81,7 +81,7 @@ myElem thing (x:xs)
 
 myReverse :: [a] -> [a]
 myReverse [] = []
-myReverse listy = last listy : myReverse (take ((length listy) - 1)listy)
+myReverse listy = last listy : myReverse (take ((length listy) - 1) listy)
 
 squish :: [[a]] -> [a]
 squish (x:xs) = concat (x:xs)
@@ -92,6 +92,17 @@ squishMap f xs = concat $ map f $ xs
 squishAgain :: [[a]] -> [a]
 squishAgain xs = squishMap (\x-> x) xs
 
+myMaximumBy :: (a -> a -> Ordering) -> [a] -> a
+myMaximumBy f [] = error "Empty list"
+myMaximumBy f [x] = x
+myMaximumBy f (x:y:xs)
+    | f x y == GT = myMaximumBy f (x:xs)
+    | otherwise = myMaximumBy f (y:xs)
 
-
+myMinimumBy :: (a -> a -> Ordering) -> [a] -> a
+myMinimumBy f [] = error "Empty list"
+myMinimumBy f [x] = x
+myMinimumBy f (x:y:xs)
+    | f x y == LT = myMinimumBy f (x:xs)
+    | otherwise = myMinimumBy f (y:xs)
 
