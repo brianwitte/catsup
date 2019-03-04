@@ -106,3 +106,16 @@ myMinimumBy f (x:y:xs)
     | f x y == LT = myMinimumBy f (x:xs)
     | otherwise = myMinimumBy f (y:xs)
 
+myMaximum :: (Ord a) => [a] -> a
+myMaximum [] = error "Empty list"
+myMaximum [x] = x
+myMaximum (x:y:xs)
+    | compare x y == GT = myMaximum (x:xs)
+    | otherwise = myMaximum (y:xs)
+
+myMinimum :: (Ord a) => [a] -> a
+myMinimum [] = error "Empty list"
+myMinimum [x] = x
+myMinimum (x:y:xs)
+    | compare x y == LT = myMinimum (x:xs)
+    | otherwise = myMinimum (y:xs)
